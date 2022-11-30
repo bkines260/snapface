@@ -1,5 +1,5 @@
-import { FaceSnapsService } from './../services/face-snaps.services';
-import { FaceSnap } from './../models/face-snap.model';
+import { FaceSnapsService } from '../../../core/services/face-snaps.services';
+import { FaceSnap } from '../../../core/models/face-snap.model';
 import { Component, OnInit, Input } from '@angular/core';
 import {Router} from '@angular/router'
 // décorateur
@@ -24,7 +24,7 @@ export class FaceSnapComponent  implements OnInit{
   }
   onSnap(){
     if(this.hasSnap){
-      this.FaceSnapsService.snapFaceSnapById(this.FaceSnap.id,'unsnap')      
+      this.FaceSnapsService.snapFaceSnapById(this.FaceSnap.id,'unsnap')
       this.buttonText='Oh Snap!'
     }
     else{
